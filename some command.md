@@ -59,3 +59,23 @@ it("should make sure a number is always positive", () => { expect(myFunc(-9)).to
 
 it("should muliply a number by 5", () => { expect(myFunc(9)).toEqual(45); });
 
+# Testing Asynchronous Code #
+
+## The key to testing async code is letting Jasmine know when it’s ready to be tested. ## 
+
+Using async/await syntax makes testing easier
+
+    . Jasmine syntax mimics JavaScript syntax
+    . Add async before the asynchronous function call
+    . Add await before the return
+    . Testing occurs after the return
+Using promise syntax with Jasmine
+
+    . Promise values are included in the return statement
+    . Test is run in the .then() statement that is chained to the return value
+Testing promise resolution and rejection with ES6 Promise Matchers Library
+
+    - .toBeResolved() tests if a promise is resolved and will return true if the promise is resolved.
+    - .toBeRejected() tests if a promise is rejected and will return true if the promise is rejected.
+    - .toBeRejectedWith(expected value) tests if the expected error is returned.
+
